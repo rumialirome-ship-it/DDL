@@ -1,0 +1,18 @@
+○ nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Sat 2025-10-11 06:19:57 UTC; 5min ago
+       Docs: man:nginx(8)
+    Process: 43382 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+   Main PID: 41067 (code=exited, status=0/SUCCESS)
+        CPU: 3.370s
+
+Oct 10 15:06:40 srv1046992 nginx[41711]: nginx: [warn] conflicting server name "www.dubailott.com" on 0.0.0.0:443, ignored
+Oct 10 15:06:40 srv1046992 nginx[41711]: nginx: [warn] conflicting server name "dubailott.com" on 0.0.0.0:80, ignored
+Oct 10 15:06:40 srv1046992 nginx[41711]: nginx: [warn] conflicting server name "www.dubailott.com" on 0.0.0.0:80, ignored
+Oct 10 15:06:40 srv1046992 systemd[1]: Reloaded A high performance web server and a reverse proxy server.
+Oct 11 06:19:57 srv1046992 systemd[1]: Stopping A high performance web server and a reverse proxy server...
+Oct 11 06:19:57 srv1046992 systemd[1]: nginx.service: Deactivated successfully.
+Oct 11 06:19:57 srv1046992 systemd[1]: Stopped A high performance web server and a reverse proxy server.
+Oct 11 06:19:57 srv1046992 systemd[1]: nginx.service: Consumed 3.370s CPU time.
+Oct 11 06:23:04 srv1046992 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mnginx.service: Unit cannot be reloaded because it is inactive.[0m
+Oct 11 06:23:21 srv1046992 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mnginx.service: Unit cannot be reloaded because it is inactive.[0m
