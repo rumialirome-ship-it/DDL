@@ -17,15 +17,15 @@ module.exports = {
     // The 'env' block contains environment variables for the application.
     // PM2 will load these automatically. Renamed from 'env_production' to 'env'
     // for reliability, removing the need for the --env flag during startup.
-    // NOTE: Variables in this block will OVERRIDE values in the .env file.
+    // NOTE: SENSITIVE KEYS HAVE BEEN REMOVED.
+    // Secrets like API_KEY, JWT_SECRET, and DB_PASSWORD will be loaded from the
+    // .env file by the "-r dotenv/config" node argument. Ensure your backend/.env
+    // file contains these values.
     env: {
       NODE_ENV: 'production',
-      PORT: 5000, 
-      JWT_SECRET: 'a_much_stronger_production_secret_for_ddl_app_!@#$', // This MUST be changed to a secure, random key for production
-      API_KEY: 'AIzaSyCF0j0LFCwPdpz30sdfiyEHG44qlLIGW1Q',
+      PORT: 5000,
       DB_HOST: '127.0.0.1',
       DB_USER: 'ddl_user',
-      DB_PASSWORD: 'Imranali@Guru1',
       DB_DATABASE: 'mydb'
     }
   }]

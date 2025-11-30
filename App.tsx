@@ -1,13 +1,7 @@
-
-
-
-
 import React, { useEffect, useCallback } from 'react';
-// FIX: The named import for HashRouter was failing. Using a namespace import as a workaround for a potential build tool or module resolution issue.
-import * as ReactRouterDom from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { AppProvider, useAppContext } from './contexts/AppContext.tsx';
-import * as AppRoutesModule from './routes/AppRoutes.tsx';
-const AppRoutes = AppRoutesModule.default;
+import AppRoutes from './routes/AppRoutes.tsx';
 import { Role } from './types/index.ts';
 
 const InactivityManager: React.FC = () => {
@@ -78,10 +72,10 @@ const App = () => {
     
     return (
         <AppProvider>
-            <ReactRouterDom.HashRouter>
+            <HashRouter>
                 <InactivityManager />
                 <AppRoutes />
-            </ReactRouterDom.HashRouter>
+            </HashRouter>
         </AppProvider>
     );
 };
